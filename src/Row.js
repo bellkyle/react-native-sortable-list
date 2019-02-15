@@ -52,6 +52,7 @@ export default class Row extends Component {
             console.log(this._active);
       const vy = Math.abs(gestureState.vy)
       const vx = Math.abs(gestureState.vx)
+                  console.log("onmove", gestureState);
 
       return this._active && (this.props.horizontal ? vx > vy : vy > vx);
     },
