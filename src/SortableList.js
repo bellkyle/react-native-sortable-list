@@ -549,6 +549,7 @@ export default class SortableList extends Component {
   }
 
   _onLayoutRow(rowKey, {nativeEvent: {layout}}) {
+                console.log("lay");
     this._resolveRowLayout[rowKey]({rowKey, layout});
   }
 
@@ -598,6 +599,7 @@ export default class SortableList extends Component {
   };
 
   _onMoveRow = (e, gestureState, location) => {
+                console.log("Ymovesortw");
     const prevMovingRowX = this._activeRowLocation.x;
     const prevMovingRowY = this._activeRowLocation.y;
     const prevMovingDirection = this._movingDirection;
