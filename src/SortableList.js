@@ -562,7 +562,7 @@ export default class SortableList extends Component {
 
   _onActivateRow = (rowKey, index, e, gestureState, location) => {
     this._activeRowLocation = location;
-
+            console.log("acivaate");
     this.setState({
       activeRowKey: rowKey,
       activeRowIndex: index,
@@ -576,12 +576,14 @@ export default class SortableList extends Component {
   };
 
   _onPressRow = (rowKey) => {
+                console.log("press");
     if (this.props.onPressRow) {
       this.props.onPressRow(rowKey);
     }
   };
 
   _onReleaseRow = (rowKey) => {
+                console.log("relesa");
     this._stopAutoScroll();
     this.setState(({activeRowKey}) => ({
       activeRowKey: null,
