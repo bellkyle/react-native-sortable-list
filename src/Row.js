@@ -90,6 +90,9 @@ export default class Row extends Component {
         if (!this._isTouchInsideElement(e)) {
           this._cancelLongPress();
         }
+      else if (this.active &&(gestureState.dx === 0 && gestureState.dy === 0) && this.numberActiveTouches === 0) {
+        this._toggleActive(e, gestureState);
+      }
 
         return;
       }
