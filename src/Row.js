@@ -65,7 +65,7 @@ export default class Row extends Component {
 
     onPanResponderGrant: (e, gestureState) => {
       e.persist();
-
+            console.log("YOOOOg");
       this._target = e.nativeEvent.target;
       this._prevGestureState = {
         ...gestureState,
@@ -110,6 +110,7 @@ export default class Row extends Component {
     },
 
     onPanResponderRelease: (e, gestureState) => {
+                 console.log("YOOOOr");
       if (this._active) {
         this._toggleActive(e, gestureState);
 
