@@ -83,6 +83,7 @@ export default class Row extends Component {
     },
 
     onPanResponderMove: (e, gestureState) => {
+     console.log(gestureState);
       if (
         !this._active ||
         gestureState.numberActiveTouches > 1 ||
@@ -92,6 +93,7 @@ export default class Row extends Component {
           this._cancelLongPress();
         }
       else if (this.active &&(gestureState.dx === 0 && gestureState.dy === 0) && this.numberActiveTouches === 0) {
+            console.log("YOOOOw");
         this._toggleActive(e, gestureState);
       }
 
@@ -168,7 +170,7 @@ export default class Row extends Component {
   }
 
   render() {
-     console.log("YOOOO");
+
     const {children, style, horizontal} = this.props;
     const rowStyle = [
       style, styles.container, this._animatedLocation.getLayout(),
