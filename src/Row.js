@@ -4,7 +4,7 @@ import {Animated, PanResponder, StyleSheet} from 'react-native';
 import {shallowEqual} from './utils';
 
 export default class Row extends Component {
-  console.log("YOOOO");
+ 
   static propTypes = {
     children: PropTypes.node,
     animated: PropTypes.bool,
@@ -168,6 +168,7 @@ export default class Row extends Component {
   }
 
   render() {
+     console.log("YOOOO");
     const {children, style, horizontal} = this.props;
     const rowStyle = [
       style, styles.container, this._animatedLocation.getLayout(),
