@@ -570,7 +570,8 @@ export default class SortableList extends Component {
       releasedRowKey: null,
       scrollEnabled: false,
     });
-
+                console.log(gestureState);
+                console.log(location);
     if (this.props.onActivateRow) {
       this.props.onActivateRow(rowKey);
     }
