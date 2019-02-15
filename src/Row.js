@@ -49,7 +49,7 @@ export default class Row extends Component {
 
     onMoveShouldSetPanResponder: (e, gestureState) => {
       if (this._isDisabled()) return false;
-
+            console.log("shouldmove");
       const vy = Math.abs(gestureState.vy)
       const vx = Math.abs(gestureState.vx)
 
