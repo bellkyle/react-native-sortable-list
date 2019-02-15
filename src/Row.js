@@ -214,6 +214,7 @@ export default class Row extends Component {
   }
 
   _toggleActive = (e, gestureState) => {
+               console.log("toggle");
     const callback = this._active ? this.props.onRelease : this.props.onActivate;
 
     this._active = !this._active;
