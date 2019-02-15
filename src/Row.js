@@ -4,6 +4,7 @@ import {Animated, PanResponder, StyleSheet} from 'react-native';
 import {shallowEqual} from './utils';
 
 export default class Row extends Component {
+  console.log("YOOOO");
   static propTypes = {
     children: PropTypes.node,
     animated: PropTypes.bool,
